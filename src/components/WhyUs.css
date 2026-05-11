@@ -1,0 +1,124 @@
+.whyus-section {
+  background: var(--bg-section);
+  position: relative;
+  overflow: hidden;
+}
+
+.whyus-bg {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 0% 50%, rgba(201,168,76,0.06) 0%, transparent 50%);
+}
+
+.whyus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left */
+.whyus-left em {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--gold);
+}
+
+.whyus-quote {
+  margin-top: 48px;
+  padding: 28px;
+  border-left: 2px solid var(--gold);
+  background: rgba(201, 168, 76, 0.04);
+  position: relative;
+}
+
+.quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  color: var(--gold);
+  opacity: 0.3;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  line-height: 1;
+}
+
+.whyus-quote p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 12px;
+}
+
+.quote-author {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Right */
+.whyus-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--border-gold);
+}
+
+.reason-card {
+  background: var(--bg-section);
+  padding: 28px 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.reason-card:hover {
+  background: rgba(201, 168, 76, 0.05);
+}
+
+.reason-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(201, 168, 76, 0.25);
+  line-height: 1;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.reason-card:hover .reason-num {
+  color: rgba(201, 168, 76, 0.6);
+}
+
+.reason-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.reason-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .whyus-grid { grid-template-columns: 1fr; gap: 50px; }
+  .whyus-right { grid-template-columns: 1fr; }
+}

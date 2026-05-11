@@ -1,0 +1,267 @@
+.estimator-section {
+  background: var(--bg-section);
+  position: relative;
+}
+
+.estimator-section::before,
+.estimator-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold-dark),
+    transparent
+  );
+}
+.estimator-section::before {
+  top: 0;
+}
+.estimator-section::after {
+  bottom: 0;
+}
+
+.estimator-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.estimator-header em {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* Steps */
+.estimator-steps {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.est-step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.est-step-num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold-dark);
+  opacity: 0.5;
+  min-width: 36px;
+  line-height: 1;
+}
+
+.est-step-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+/* Form card */
+.estimator-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 28px;
+}
+
+.form-label {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--border-gold);
+  color: var(--text-muted);
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pill:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.05);
+}
+
+.pill.active {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  border-color: var(--gold);
+  color: var(--bg-dark);
+  font-weight: 700;
+}
+
+/* Input — dark background, gold border like screenshot */
+.form-input {
+  width: 100%;
+  background: #0d0b08;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  padding: 16px 20px;
+  color: var(--text-primary);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  border-radius: 0;
+}
+
+.form-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.08);
+}
+
+.form-input::placeholder {
+  color: rgba(138, 122, 96, 0.7);
+}
+
+/* WhatsApp preview bubble */
+.wa-preview {
+  margin-bottom: 20px;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid rgba(37, 211, 102, 0.25);
+  animation: fadeIn 0.4s ease;
+}
+
+.wa-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(37, 211, 102, 0.12);
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(37, 211, 102, 0.15);
+}
+
+.wa-icon {
+  color: #25d366;
+  display: flex;
+  align-items: center;
+}
+
+.wa-preview-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #25d366;
+}
+
+.wa-preview-body {
+  padding: 14px 16px;
+  background: rgba(37, 211, 102, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.wa-preview-body p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.wa-preview-body strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* CTA button — gold gradient like screenshot, full width */
+.wa-btn {
+  background: linear-gradient(
+    90deg,
+    #9a7a2e 0%,
+    #e8c97a 50%,
+    #c9a84c 100%
+  ) !important;
+  color: #0d0b08 !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 2.5px !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  padding: 20px 36px !important;
+  transition: all 0.35s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.wa-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #e8c97a 0%, #fff8dc 50%, #c9a84c 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.wa-btn:hover::before {
+  opacity: 1;
+}
+
+.wa-btn span,
+.wa-btn svg {
+  position: relative;
+  z-index: 1;
+}
+
+.wa-btn:hover {
+  box-shadow: 0 8px 32px rgba(201, 168, 76, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+.wa-btn.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .estimator-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .estimator-form {
+    padding: 28px 20px;
+  }
+  .estimator-steps {
+    display: none;
+  }
+}
