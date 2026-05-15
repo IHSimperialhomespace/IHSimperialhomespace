@@ -4,11 +4,18 @@
 }
 
 .about-section::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold-dark),
+    transparent
+  );
 }
 
 .about-grid {
@@ -18,7 +25,9 @@
   align-items: center;
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .about-grid.visible {
@@ -27,7 +36,9 @@
 }
 
 /* Image side */
-.about-image-wrap { position: relative; }
+.about-image-wrap {
+  position: relative;
+}
 
 .about-image-frame {
   position: relative;
@@ -56,7 +67,7 @@
 .img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(201,168,76,0.08), transparent);
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.08), transparent);
   pointer-events: none;
 }
 
@@ -85,19 +96,19 @@
   color: var(--bg-dark);
   padding: 20px 24px;
   text-align: center;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .years-num {
   display: block;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1;
 }
 
 .years-label {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -107,9 +118,10 @@
 
 /* Frame borders */
 .about-image-frame::before {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: 0; right: 0;
+  bottom: 0;
+  right: 0;
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   border: 1px solid var(--border-gold);
@@ -118,7 +130,7 @@
 
 /* Text side */
 .about-text em {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-style: italic;
   color: var(--gold);
 }
@@ -159,7 +171,7 @@
 }
 
 .about-feature strong {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -184,5 +196,19 @@
     padding-bottom: 20px;
     padding-right: 20px;
   }
-  .years-badge { left: 0; }
+  .years-badge {
+    left: 0;
+  }
+}
+
+/* SEO text — readable but visually subtle */
+.about-seo-text {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 0.55;
+  border-left: 2px solid var(--border-gold);
+  padding-left: 14px;
 }
