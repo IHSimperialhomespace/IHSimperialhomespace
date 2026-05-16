@@ -1,0 +1,62 @@
+/* ── Shared Page Banner ─────────────────────────── */
+.page-hero-banner {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80')
+    center / cover no-repeat;
+  margin-top: 0;
+  padding: 120px 40px 80px;
+  overflow: hidden;
+}
+
+.page-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,8,5,0.94) 0%, rgba(10,8,5,0.78) 50%, rgba(10,8,5,0.92) 100%);
+}
+
+.page-hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  animation: fadeInUp 0.7s ease both;
+}
+
+.page-hero-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+}
+
+.page-hero-label::before,
+.page-hero-label::after {
+  content: '';
+  width: 32px; height: 1px;
+  background: var(--gold);
+}
+
+.page-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+.page-hero-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .page-hero-banner { min-height: 260px; padding: 100px 20px 60px; }
+  .page-hero-title { font-size: 2rem; }
+}
