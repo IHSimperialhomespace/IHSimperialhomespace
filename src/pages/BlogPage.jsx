@@ -1,97 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from '../router'
+import { posts } from './blogData'
 import './BlogPage.css'
-
-const posts = [
-  {
-    id: 1,
-    slug: 'wooden-interior-design-trends-2025',
-    category: 'Design Trends',
-    title: '7 Wooden Interior Design Trends Dominating Hyderabad Homes in 2025',
-    excerpt: 'From warm walnut panels to textured teak ceilings, wood is making a bold comeback in luxury residential interiors. Here are the top wooden design trends our clients are requesting this year.',
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80',
-    date: 'May 10, 2025',
-    readTime: '5 min read',
-    featured: true,
-  },
-  {
-    id: 2,
-    slug: 'modular-kitchen-guide',
-    category: 'Kitchen Design',
-    title: 'The Complete Guide to Modular Kitchens for Indian Homes',
-    excerpt: 'A modular kitchen is one of the most important investments in your home. Learn about layouts, materials, finishes, and what to expect when designing a modular kitchen in Hyderabad.',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
-    date: 'April 22, 2025',
-    readTime: '7 min read',
-    featured: false,
-  },
-  {
-    id: 3,
-    slug: 'luxury-bedroom-design-tips',
-    category: 'Bedroom Design',
-    title: 'How to Design a Luxury Master Bedroom on Any Budget',
-    excerpt: 'A beautiful master bedroom doesn\'t always require a massive budget. Our designers share their top tips for creating a hotel-like bedroom experience in your Hyderabad apartment or villa.',
-    image: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&q=80',
-    date: 'April 8, 2025',
-    readTime: '6 min read',
-    featured: false,
-  },
-  {
-    id: 4,
-    slug: 'office-interior-design-productivity',
-    category: 'Office Design',
-    title: 'Designing Office Spaces That Boost Productivity and Employee Wellbeing',
-    excerpt: 'The design of your workplace directly impacts your team\'s performance. Discover how thoughtful office interior design can transform your business environment in Hyderabad.',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
-    date: 'March 28, 2025',
-    readTime: '5 min read',
-    featured: false,
-  },
-  {
-    id: 5,
-    slug: 'false-ceiling-design-ideas',
-    category: 'Ceiling Design',
-    title: '10 False Ceiling Design Ideas That Add Drama to Any Room',
-    excerpt: 'False ceilings are one of the most impactful design elements in Indian homes. From coffered wood ceilings to backlit panels, explore ideas that can elevate your space instantly.',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
-    date: 'March 15, 2025',
-    readTime: '4 min read',
-    featured: false,
-  },
-  {
-    id: 6,
-    slug: 'wardrobe-design-guide',
-    category: 'Storage Design',
-    title: 'Walk-in Wardrobe vs Built-in Wardrobe: Which is Right for Your Home?',
-    excerpt: 'Storage is one of the most requested features in modern Indian homes. We break down the differences between walk-in wardrobes and built-in designs to help you decide what works best.',
-    image: 'https://images.unsplash.com/photo-1616137466211-f939a420be84?w=800&q=80',
-    date: 'March 2, 2025',
-    readTime: '5 min read',
-    featured: false,
-  },
-  {
-    id: 7,
-    slug: 'interior-design-cost-hyderabad',
-    category: 'Tips & Advice',
-    title: 'How Much Does Interior Design Cost in Hyderabad? A Complete Breakdown',
-    excerpt: 'One of the most common questions we get is about interior design pricing. Here\'s a transparent breakdown of what you can expect to pay for different types of interior design projects in Hyderabad.',
-    image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80',
-    date: 'February 18, 2025',
-    readTime: '8 min read',
-    featured: false,
-  },
-  {
-    id: 8,
-    slug: 'living-room-design-ideas-2025',
-    category: 'Living Room',
-    title: '8 Living Room Design Ideas for Modern Indian Apartments',
-    excerpt: 'The living room is the heart of every Indian home. Whether you prefer a classic, contemporary, or eclectic style, these design ideas will inspire your next interior design project.',
-    image: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&q=80',
-    date: 'February 5, 2025',
-    readTime: '6 min read',
-    featured: false,
-  },
-]
 
 const categories = ['All', ...new Set(posts.map(p => p.category))]
 
@@ -110,7 +20,6 @@ const BlogPage = () => {
 
   return (
     <>
-      {/* Page Banner */}
       <div className="page-hero-banner blog-banner">
         <div className="page-hero-overlay" />
         <div className="page-hero-content">
@@ -125,7 +34,7 @@ const BlogPage = () => {
 
           {/* Featured Post */}
           {featured && activeCategory === 'All' && !search && (
-            <div className="blog-featured">
+            <div className="blog-featured" onClick={() => navigate(`blog/${featured.slug}`)}>
               <div className="blog-featured-img">
                 <img src={featured.image} alt={featured.title} />
                 <div className="blog-featured-overlay" />
@@ -140,7 +49,7 @@ const BlogPage = () => {
                   <span className="meta-dot">·</span>
                   <span>{featured.readTime}</span>
                 </div>
-                <button className="btn-primary blog-read-btn" onClick={() => navigate(`blog/${featured.slug}`)}>
+                <button className="btn-primary blog-read-btn">
                   <span>Read Article</span>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
@@ -158,9 +67,7 @@ const BlogPage = () => {
                   key={cat}
                   className={`blog-cat-btn ${activeCategory === cat ? 'active' : ''}`}
                   onClick={() => setActiveCategory(cat)}
-                >
-                  {cat}
-                </button>
+                >{cat}</button>
               ))}
             </div>
             <div className="blog-search">
@@ -226,7 +133,6 @@ const BlogPage = () => {
               <span>Book a Consultation</span>
             </button>
           </div>
-
         </div>
       </section>
     </>
