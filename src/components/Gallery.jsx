@@ -4,106 +4,156 @@ import "./Gallery.css";
 const categories = {
   residential: {
     label: "Residential Spaces",
-    subtitle: "Apartments · Villas · Bungalows · Farmhouses",
-    cover:
-      "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1200&q=80",
+    subtitle: "Bedrooms · Living Rooms · Kitchens · Wardrobes · Home Bar",
+    cover: "/gallery/living-2.jpg",
     images: [
       {
-        src: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&q=80",
-        title: "Luxury Master Bedroom",
-        tag: "Bedroom",
+        src: "/gallery/living-1.jpg",
+        title: "Modern Living Room",
+        tag: "Living Room",
       },
       {
-        src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
-        title: "Wooden Panel Bedroom",
-        tag: "Bedroom",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
-        title: "Modular Kitchen Design",
-        tag: "Kitchen",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&q=80",
-        title: "Luxury Kitchen Interior",
-        tag: "Kitchen",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80",
+        src: "/gallery/living-2.jpg",
         title: "Premium Living Room",
         tag: "Living Room",
       },
       {
-        src: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&q=80",
-        title: "Warm Wood Living Hall",
+        src: "/gallery/living-3.jpg",
+        title: "Contemporary Living Space",
         tag: "Living Room",
       },
       {
-        src: "https://images.unsplash.com/photo-1616137466211-f939a420be84?w=800&q=80",
+        src: "/gallery/living-4.jpg",
+        title: "Open Plan Living & Dining",
+        tag: "Living Room",
+      },
+      {
+        src: "/gallery/kitchen-1.jpg",
+        title: "Modern Modular Kitchen",
+        tag: "Kitchen",
+      },
+      {
+        src: "/gallery/kitchen-2.jpg",
+        title: "Luxury Island Kitchen",
+        tag: "Kitchen",
+      },
+      {
+        src: "/gallery/kitchen-3.jpg",
+        title: "Rose Gold Kitchen Design",
+        tag: "Kitchen",
+      },
+      {
+        src: "/gallery/bar-1.jpg",
+        title: "Home Bar & Entertainment",
+        tag: "Home Bar",
+      },
+      { src: "/gallery/bar-2.jpg", title: "Luxury Bar Unit", tag: "Home Bar" },
+      {
+        src: "/gallery/bedroom-1.jpg",
+        title: "Luxury Master Bedroom",
+        tag: "Bedroom",
+      },
+      {
+        src: "/gallery/bedroom-2.jpg",
+        title: "Premium Bedroom Design",
+        tag: "Bedroom",
+      },
+      {
+        src: "/gallery/bedroom-3.jpg",
+        title: "Wooden Panel Bedroom",
+        tag: "Bedroom",
+      },
+      {
+        src: "/gallery/wardrobe-1.jpg",
         title: "Walk-in Wardrobe",
         tag: "Wardrobe",
       },
       {
-        src: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80",
-        title: "Kids Bedroom Design",
-        tag: "Kids Room",
+        src: "/gallery/wardrobe-2.jpg",
+        title: "Gold Walk-in Wardrobe",
+        tag: "Wardrobe",
       },
       {
-        src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
-        title: "Farmhouse Living Room",
-        tag: "Farmhouse",
+        src: "/gallery/wardrobe-3.jpg",
+        title: "Built-in Wardrobe",
+        tag: "Wardrobe",
       },
       {
-        src: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
-        title: "Luxury Bathroom",
-        tag: "Bathroom",
+        src: "/gallery/wardrobe-4.jpg",
+        title: "Luxury Wardrobe Design",
+        tag: "Wardrobe",
       },
       {
-        src: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
-        title: "Dining Room Design",
-        tag: "Dining",
+        src: "/gallery/wardrobe-5.jpg",
+        title: "Premium Walk-in Closet",
+        tag: "Wardrobe",
       },
       {
-        src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
-        title: "Wooden Ceiling Bedroom",
-        tag: "Bedroom",
+        src: "/gallery/wardrobe-6.jpg",
+        title: "Dark Wood Wardrobe",
+        tag: "Wardrobe",
+      },
+      {
+        src: "/gallery/wardrobe-7.jpg",
+        title: "Bespoke Wardrobe Design",
+        tag: "Wardrobe",
       },
     ],
   },
   commercial: {
     label: "Commercial Spaces",
-    subtitle: "Offices · Restaurants · Retail · Showrooms",
+    subtitle: "Offices · Restaurants · Retail · Hotels · Showrooms",
     cover:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
+      "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=1200&q=80",
     images: [
       {
-        src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
-        title: "Corporate Office",
+        src: "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=800&q=80",
+        title: "Modern Corporate Office",
         tag: "Office",
       },
       {
-        src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80",
-        title: "Restaurant Interior",
+        src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
+        title: "Open Plan Office Space",
+        tag: "Office",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&q=80",
+        title: "Executive Cabin Design",
+        tag: "Office",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+        title: "Fine Dining Restaurant",
         tag: "Restaurant",
       },
       {
-        src: "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=800&q=80",
-        title: "Modern Open Workspace",
-        tag: "Office",
+        src: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=800&q=80",
+        title: "Luxury Restaurant Interior",
+        tag: "Restaurant",
       },
       {
-        src: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
-        title: "Executive Suite",
-        tag: "Office",
+        src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
+        title: "Modern Cafe Design",
+        tag: "Restaurant",
       },
       {
-        src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
-        title: "Retail Showroom",
+        src: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800&q=80",
+        title: "Retail Store Interior",
         tag: "Retail",
       },
       {
-        src: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?w=800&q=80",
-        title: "Luxury Hotel Lobby",
+        src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
+        title: "Fashion Showroom",
+        tag: "Retail",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
+        title: "Luxury Hotel Room",
+        tag: "Hospitality",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
+        title: "Hotel Lobby Design",
         tag: "Hospitality",
       },
     ],
@@ -160,13 +210,13 @@ const Gallery = () => {
           <p className="section-label">Portfolio</p>
           <h2 className="section-title">Our Work</h2>
           <p className="section-subtitle">
-            Explore spaces we have transformed — each project a unique story of
-            elegance, warmth, and precision craftsmanship.
+            Real projects, real spaces — every image you see here is crafted by
+            IHS Imperial Home Space.
           </p>
         </div>
 
         <div className={`gallery-stage ${entering ? "exiting" : "entered"}`}>
-          {/* ── Category Cards ── */}
+          {/* Category Cards */}
           {!active && (
             <div className="gallery-categories">
               {Object.entries(categories).map(([key, cat], idx) => (
@@ -214,7 +264,7 @@ const Gallery = () => {
             </div>
           )}
 
-          {/* ── Image Grid ── */}
+          {/* Image Grid */}
           {active && (
             <div className="gallery-view">
               <div className="gallery-view-top">
@@ -309,7 +359,7 @@ const Gallery = () => {
         )}
       </div>
 
-      {/* ── Lightbox ── */}
+      {/* Lightbox */}
       {lightbox !== null && active && (
         <div className="lightbox" onClick={() => setLightbox(null)}>
           <div className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
