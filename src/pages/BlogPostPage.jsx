@@ -8,7 +8,7 @@ const articles = {
     date: "May 10, 2025",
     readTime: "5 min read",
     image:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1400&q=80",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1400&q=80",
     content: [
       {
         type: "intro",
@@ -243,7 +243,7 @@ const articles = {
     date: "March 28, 2025",
     readTime: "5 min read",
     image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1400&q=80",
     content: [
       {
         type: "intro",
@@ -308,7 +308,7 @@ const articles = {
     date: "March 15, 2025",
     readTime: "4 min read",
     image:
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400&q=80",
+      "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=1400&q=80",
     content: [
       {
         type: "intro",
@@ -391,7 +391,7 @@ const articles = {
     date: "March 2, 2025",
     readTime: "5 min read",
     image:
-      "https://images.unsplash.com/photo-1616137466211-f939a420be84?w=1400&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80",
     content: [
       {
         type: "intro",
@@ -454,7 +454,7 @@ const articles = {
     date: "February 18, 2025",
     readTime: "8 min read",
     image:
-      "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1400&q=80",
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1400&q=80",
     content: [
       {
         type: "intro",
