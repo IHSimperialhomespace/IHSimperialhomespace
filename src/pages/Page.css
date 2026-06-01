@@ -1,62 +1,93 @@
-/* ── Shared Page Banner ─────────────────────────── */
+/* ══════════════════════════════════════════
+   SHARED PAGE HERO BANNER
+══════════════════════════════════════════ */
 .page-hero-banner {
   position: relative;
-  min-height: 360px;
+  min-height: 380px;
   display: flex;
   align-items: center;
   justify-content: center;
   background:
     url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80')
     center / cover no-repeat;
-  margin-top: 0;
-  padding: 120px 40px 80px;
+  padding: 130px 40px 90px;
   overflow: hidden;
 }
 
+.page-hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  animation: cinematicDrift 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
 .page-hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(10,8,5,0.94) 0%, rgba(10,8,5,0.78) 50%, rgba(10,8,5,0.92) 100%);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(8,6,3,0.95) 0%,
+    rgba(13,11,8,0.80) 45%,
+    rgba(8,6,3,0.92) 100%
+  );
 }
 
 .page-hero-content {
-  position: relative; z-index: 2;
+  position: relative;
+  z-index: 2;
   text-align: center;
-  animation: fadeInUp 0.7s ease both;
+  animation: fadeInUp 0.8s cubic-bezier(0.16,1,0.3,1) both;
+  animation-delay: 0.1s;
 }
 
 .page-hero-label {
   font-family: 'Montserrat', sans-serif;
-  font-size: 10px; font-weight: 700;
-  letter-spacing: 4px; text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 14px;
-  display: flex; align-items: center; justify-content: center; gap: 12px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
 }
 
 .page-hero-label::before,
 .page-hero-label::after {
   content: '';
-  width: 32px; height: 1px;
-  background: var(--gold);
+  width: 36px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.page-hero-label::after {
+  background: linear-gradient(90deg, var(--gold), transparent);
 }
 
 .page-hero-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 14px;
-  line-height: 1.15;
+  margin-bottom: 16px;
+  line-height: 1.12;
+  animation: fadeInUp 0.85s cubic-bezier(0.16,1,0.3,1) 0.2s both;
 }
 
 .page-hero-sub {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.85rem;
   color: var(--text-muted);
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  animation: fadeIn 0.8s ease 0.4s both;
 }
 
 @media (max-width: 768px) {
-  .page-hero-banner { min-height: 260px; padding: 100px 20px 60px; }
-  .page-hero-title { font-size: 2rem; }
+  .page-hero-banner { min-height: 270px; padding: 110px 20px 70px; }
+  .page-hero-title { font-size: 2.1rem; }
 }

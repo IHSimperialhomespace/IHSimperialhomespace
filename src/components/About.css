@@ -23,7 +23,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(30px);
   transition:
     opacity 0.8s ease,

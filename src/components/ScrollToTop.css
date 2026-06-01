@@ -2,28 +2,69 @@
   position: fixed;
   bottom: 32px;
   right: 32px;
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  width: 48px;
+  height: 48px;
+  background: rgba(13,11,8,0.9);
   border: none;
-  color: var(--bg-dark);
+  color: var(--gold);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(20px) scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1);
   z-index: 999;
-  box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .scroll-top.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .scroll-top:hover {
-  box-shadow: 0 6px 30px rgba(201,168,76,0.5);
+  transform: translateY(-4px) scale(1.08);
+  color: var(--gold-light);
+}
+
+/* Progress ring */
+.progress-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progress-ring circle {
+  fill: none;
+  stroke-width: 2;
+}
+
+.progress-ring circle:first-child {
+  stroke: rgba(201,168,76,0.15);
+}
+
+.progress-fill {
+  stroke: var(--gold);
+  stroke-dasharray: 113;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.arrow-icon {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.scroll-top:hover .arrow-icon {
   transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .scroll-top { bottom: 20px; right: 20px; width: 42px; height: 42px; }
 }

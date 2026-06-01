@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './Stats.css'
 
-const CountUp = ({ end, suffix = '', duration = 2000 }) => {
+const CountUp = ({ end, suffix = '', duration = 2200 }) => {
   const [count, setCount] = useState(0)
   const ref = useRef(null)
   const started = useRef(false)
@@ -15,7 +15,7 @@ const CountUp = ({ end, suffix = '', duration = 2000 }) => {
           const animate = (now) => {
             const elapsed = now - startTime
             const progress = Math.min(elapsed / duration, 1)
-            const eased = 1 - Math.pow(1 - progress, 3)
+            const eased = 1 - Math.pow(1 - progress, 4)
             setCount(Math.floor(eased * end))
             if (progress < 1) requestAnimationFrame(animate)
           }
@@ -32,10 +32,10 @@ const CountUp = ({ end, suffix = '', duration = 2000 }) => {
 }
 
 const stats = [
-  { num: 10, suffix: '+', label: 'Years of Excellence' },
-  { num: 150, suffix: '+', label: 'Projects Completed' },
-  { num: 18, suffix: '', label: 'Awards Won' },
-  { num: 98, suffix: '%', label: 'Client Satisfaction' },
+  { num: 10,  suffix: '+', label: 'Years of Excellence' },
+  { num: 150, suffix: '+', label: 'Projects Completed'  },
+  { num: 18,  suffix: '',  label: 'Awards Won'          },
+  { num: 98,  suffix: '%', label: 'Client Satisfaction' },
 ]
 
 const Stats = () => (
